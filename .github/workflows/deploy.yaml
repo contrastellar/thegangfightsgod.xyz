@@ -35,8 +35,8 @@ jobs:
           echo $whoami
           ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
         
-      - name: Deploy with scp to '/var/www/'
-        run: |
-          echo $GITHUB_WORKSPACE
-          ls -lha
-          scp $GITHUB_WORKSPACE/html/* ${{ secrets.SSH_USER }}@${{secrets.SSH_HOST }}:/var/www/html/
+      # - name: Deploy with scp to '/var/www/'
+        #run: |
+        #  echo $GITHUB_WORKSPACE
+        #  ls -lha
+        #  scp $GITHUB_WORKSPACE/html/* ${{ secrets.SSH_USER }}@${{secrets.SSH_HOST }}:/var/www/html/
