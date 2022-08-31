@@ -1,0 +1,12 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.post{
+    margin-left: 10px;
+}
+
+dd{
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
