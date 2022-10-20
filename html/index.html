@@ -1,5 +1,9 @@
+<!DOCTYPE html>
+
 <html>
     <link rel="stylesheet" href="index.css"></link>
+    <link rel="stylesheet" href="" id="mode-selector"/>
+    <script src="./index.js" type=""></script>
 
     <head>
         <title>the gang fights god dot xyz</title>
@@ -11,7 +15,7 @@
         <h1>This website is a work in progress. Please come back at a later date. Or read what's here. I can't stop you.</h1>
         <h1>This is my compendium of "Endgame" and other fun stuff for my friends to use. But its also on the web. Like. I hosted it. So. Anyone can use its resources.</h1>
     </head>
-    <body>
+    <body onload="startup()">
         <h2 id="where">"Where do I get/unlock/whatever..."</h2>
         <ul>
             <li>Unlock Savage Pandaemonium?</li>
@@ -84,11 +88,11 @@
 
             Both the Variant and Criterion currency can be turned in at <i>Trisassant</i> in Old Sharlyan (12.0, 13.3).
         </p>
-    <footer>
+    <footer id="menu">
         <br>
         <p>by <a href="https://twitter.com/contrastellar">contrastellar (Gabriella Alicizatia @ Siren)</a><br>hosted on hemisphere.contrastellar.com<br>
         <a href="https://github.com/Contrastellar/thegangfightsgod.xyz">contribute here</a></p>
-        <p>this site uses <a href="https://www.w3schools.com/js/js_cookies.asp">JavaScript cookies</a> for the dark-mode. Please click <a id="dark-mode">here to activate dark mode.</a></p>
+        <p>this site uses <a href="https://www.w3schools.com/js/js_cookies.asp">JavaScript cookies</a> for the dark-mode. Please click <a href="#menu" onclick="swapModes()">here to swap modes.</a></p>
     </footer>
     </body>
 </html>
