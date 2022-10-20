@@ -1,5 +1,9 @@
 body{
     background:fixed;
     background-color: black;
-    color: aliceblue;
+    color: aliceblue;   
+}
+
+a:visited{
+    color: darkorchid;
 }
