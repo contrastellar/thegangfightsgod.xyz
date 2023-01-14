@@ -49,6 +49,18 @@ function createCookie(cookieName, cookieValue){
 
 }
 
+/**
+ * @param cookieExpiry this is a UNIX Timestamp for when the cookie 
+ */
+function createCookie(cookieName, cookieValue, cookieExpiry){
+    let cookieString = cookieName + "=" + cookieValue;
+    cookieString += "; SameSite=Strict;";
+    cookieString += "expires=" + cookieExpiry.toUTCString() + ";";
+    document.cookie = cookieString;
+    return;
+
+}
+
 function startup(){
     establishCSSMode();
 }
@@ -71,7 +83,7 @@ function establishCSSMode(){
 }
 
 /**
- * Function to swap the cookie value and ***RELOAD*** the 
+ * Function to swap the cookie value and swap the current view. 
  */
 function swapModes(){
     let cssModeCookie = retrieveCookie("cssMode");
@@ -87,5 +99,14 @@ function swapModes(){
         throw Exception;
     }
     createCookie("cssMode", status);
+
+}
+
+/**
+ * This function is used to connect to the FFXIV REST API to determine what the current patch is.
+ * This function also uses browser cookies /w known expiry (the tuesday after the cookie is created) to determine if it needs
+ * to reach out to the API or not.
+ */
+function topLoad(){
 
 }
