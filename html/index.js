@@ -31,7 +31,7 @@ function retrieveCookie(cookieName){
         ?.split('=')[1];
 
     if(output == undefined){
-        throw "Cookie Exception";
+        throw "Custom Cookie Exception";
     }
 
     return output;
@@ -44,18 +44,6 @@ function retrieveCookie(cookieName){
 function createCookie(cookieName, cookieValue){
     let cookieString = cookieName + "=" + cookieValue;
     cookieString += "; SameSite=Strict;";
-    document.cookie = cookieString;
-    return;
-
-}
-
-/**
- * @param cookieExpiry this is a UNIX Timestamp for when the cookie 
- */
-function createCookie(cookieName, cookieValue, cookieExpiry){
-    let cookieString = cookieName + "=" + cookieValue;
-    cookieString += "; SameSite=Strict;";
-    cookieString += "expires=" + cookieExpiry.toUTCString() + ";";
     document.cookie = cookieString;
     return;
 
