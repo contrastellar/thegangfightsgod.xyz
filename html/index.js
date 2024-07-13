@@ -49,8 +49,14 @@ function createCookie(cookieName, cookieValue){
 
 }
 
+function addDefaultH2Behavior(){
+    let allh2tags = document.getElementsByTagName("h2");
+    console.log("This function" + Function.name + " has not been implemented.");
+}
+
 function startup(){
     establishCSSMode();
+    addDefaultH2Behavior();
 }
 
 /**
@@ -96,5 +102,5 @@ function swapModes(){
  * to reach out to the API or not.
  */
 function topLoad(){
-
+    // TODO implement this function
 }
